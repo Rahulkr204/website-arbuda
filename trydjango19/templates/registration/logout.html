@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+<!-- {% load i18n %} -->
+
+{% block logoutcontent %}
+<div class="log-out">
+	<p>You have successfully logged out.</p>
+	<p>Back to home : <a href="{% url 'home' %}">Home</a></p>
+	<p>Back to dashboard : <a href="{% url 'auth_login' %}">Login</a></p>
+</div>
+{% endblock %}
+

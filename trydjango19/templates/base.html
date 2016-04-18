@@ -1,0 +1,41 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Transportation Agency">
+    <meta name="author" content="Team 9">
+
+    <title>Arbuda | Trasnport</title>
+
+    {% include 'head_css.html' %}
+      <style>
+      {% block style %}{% endblock %}
+      </style>
+</head>
+
+<body>
+  {% include 'navbar.html' %}
+  {% block jumbotron %}{% endblock %}
+      <!-- container -->
+        {% block logincontent %} {% endblock %}
+        {% block maincontent %} {% endblock %}
+        {% block logoutcontent %}{% endblock %}
+      <!-- /container -->
+      {% include 'footer.html' %}
+      
+    {% include "javascript.html" %}
+      <script>
+         $(document).ready(function(){
+         // Activate the side menu 
+         $(".button-collapse").sideNav();
+        });
+      </script>
+  </body>
+</html>
+
